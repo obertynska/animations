@@ -127,6 +127,24 @@ window.addEventListener('DOMContentLoaded', function () {
         popupClose.addEventListener('click', () => {
             popUp.style.display = 'none';
         })
+    } else{
+        btnMenu.addEventListener('click', () =>{
+            menu.style.transform = `translate(100%)`;
+        });
+        closeBtn.addEventListener('click', () =>{
+            menu.style.transform = `translate(200%)`;
+        });
+        menuItems.forEach((elem) => elem.addEventListener('click', ()=>{
+            menu.style.transform = `translate(200%)`;
+        }));
+        popUpBtn.forEach((elem) => {
+            elem.addEventListener('click', ()=>{
+                popUp.style.display = 'block';
+            })
+        });
+        popupClose.addEventListener('click', () => {
+            popUp.style.display = 'none';
+        })
     }
 
 });
